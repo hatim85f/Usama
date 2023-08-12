@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "329364863547",
+    "firebase_url": "https://salekeg-masr-default-rtdb.firebaseio.com",
+    "project_id": "salekeg-masr",
+    "storage_bucket": "salekeg-masr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329364863547:android:e6085c94a4920e86d23a1e",
+        "android_client_info": {
+          "package_name": "com.salekmasr.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329364863547-g6ai9ku0nnr71o3gnih37moci017jsfd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.salekmasr.app",
+            "certificate_hash": "1cf9d8bdd78d172311aa31c6015fb019f1cebbbb"
+          }
+        },
+        {
+          "client_id": "329364863547-m88ptirgblo4hnesu4hg2condt491bed.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.salekmasr.app",
+            "certificate_hash": "89fedeaeb60f191702ead60524e1730ab3e3c572"
+          }
+        },
+        {
+          "client_id": "329364863547-qmdso2461qh53639g7ha0nr107bmhrv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1FcuxAUCPxzycvgJGl692gfk9vMfzlko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329364863547-qmdso2461qh53639g7ha0nr107bmhrv4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "329364863547-41dj7ctci6qa8dv7t9uv6aceao6aer3g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.salekmasr.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

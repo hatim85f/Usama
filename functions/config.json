@@ -1,0 +1,113 @@
+{
+	"app_name": "Salek سالك",
+	"app_description": "Salek anywhere you want",
+	"app_identifier": "com.salekmasr.app",
+	"ios_app_version": "1.0.0",
+	"android_app_version": "101",
+	"facebookAppId": "119829828214761",
+	"facebookClientToken": "79e872226704cc0142a4df5bde4dc0ff",
+	"firebaseProjectId": "salekeg-masr",
+	"googleApiKeys": {
+		"ios": "AIzaSyCK74C_BI3VyDJg_VxWscLUszIIcy-NSpM",
+		"android": "AIzaSyA1FcuxAUCPxzycvgJGl692gfk9vMfzlko",
+		"web": "AIzaSyDle4O6hqT7CbgpmxyujBz2sOP9dpEGypU",
+		"server": "AIzaSyDle4O6hqT7CbgpmxyujBz2sOP9dpEGypU"
+	},
+	"expo_owner": "salekmasr.com",
+	"expo_slug": "salekmasr-fae85",
+	"expo_project_id": "2ef8fbf0-81ec-4529-a4c6-02086faee5bd",
+	"admin_email": "osamanaguibbosla@gmail.com",
+	"purchase_code": "99d9ef59-e7dc-4928-8b79-15d9ead9b4aa",
+	"paymentMethods": {
+		"braintree": {
+			"active": false,
+			"testing": false,
+			"merchantId": "XXXXXXXXXXXXXXX",
+			"publicKey": "XXXXXXXXXXXXXXX",
+			"privateKey": "XXXXXXXXXXXXXXX"
+		},
+		"culqi": {
+			"active": false,
+			"PUBLIC_KEY": "XXXXXXXXXXXXXXX",
+			"SECURE_KEY": "XXXXXXXXXXXXXXX"
+		},
+		"flutterwave": {
+			"active": false,
+			"FLUTTERWAVE_PUBLIC_KEY": "XXXXXXXXXXXXXXX",
+			"FLUTTERWAVE_SECRET_KEY": "XXXXXXXXXXXXXXX"
+		},
+		"liqpay": {
+			"active": false,
+			"public_key": "XXXXXXXXXXXXXXX",
+			"private_key": "XXXXXXXXXXXXXXX"
+		},
+		"mercadopago": {
+			"active": false,
+			"public_key": "XXXXXXXXXXXXXXX",
+			"access_token": "XXXXXXXXXXXXXXX"
+		},
+		"payfast": {
+			"active": false,
+			"testingMode": false,
+			"PAYFAST_MEWRCHANT_ID": "XXXXXXXXXXXXXXX",
+			"PAYFAST_MERCHANT_KEY": "XXXXXXXXXXXXXXX",
+			"passPhrase": null
+		},
+		"paypal": {
+			"active": false,
+			"testing": false,
+			"paypal_client_id": "XXXXXXXXXXXXXXX",
+			"paypal_secret": "XXXXXXXXXXXXXXX"
+		},
+		"paystack": {
+			"active": false,
+			"PAYSTACK_PUBLIC_KEY": "XXXXXXXXXXXXXXX",
+			"PAYSTACK_SECRET_KEY": "XXXXXXXXXXXXXXX"
+		},
+		"paytm": {
+			"active": false,
+			"testing": false,
+			"PAYTM_MEWRCHANT_ID": "XXXXXXXXXXXXXXX",
+			"PAYTM_MERCHANT_KEY": "XXXXXXXXXXXXXXX"
+		},
+		"payulatam": {
+			"active": false,
+			"testing": false,
+			"merchantId": 111111,
+			"apiKey": "XXXXXXXXXXXXXXX",
+			"accountId": 111111
+		},
+		"securepay": {
+			"active": false,
+			"testing": false,
+			"MERCHANT_CODE": "XXXXXXXXXXXXXXX",
+			"TXN_PASSWORD": "XXXXXXXXXXXXXXX"
+		},
+		"stripe": {
+			"active": false,
+			"stripe_private_key": "XXXXXXXXXXXXXXX",
+			"stripe_public_key": "XXXXXXXXXXXXXXX"
+		},
+		"squareup": {
+			"active": false,
+			"testing": false,
+			"APPLICATION_ID": "XXXXXXXXXXXXXXX",
+			"LOCATION_ID": "XXXXXXXXXXXXXXX",
+			"ACCESS_TOKEN": "XXXXXXXXXXXXXXX"
+		},
+		"wipay": {
+			"active": false,
+			"testing": false,
+			"ACCOUNT_NO": "XXXXXXXXXXXXXXX",
+			"API_KEY": "XXXXXXXXXXXXXXX"
+		},
+		"razorpay": {
+			"active": false,
+			"KEY_ID" : "XXXXXXXXXXXXXXX",
+			"KEY_SECRET" :"XXXXXXXXXXXXXXX"
+		},
+		"test": {
+			"active": false
+		}
+	}
+}

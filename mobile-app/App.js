@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Asset } from "expo-asset";
 import * as Font from "expo-font";
 import AppContainer from "./src/navigation/AppNavigator";
+import * as Notifications from "expo-notifications";
 import * as Updates from "expo-updates";
 import {
   ActivityIndicator,
   StyleSheet,
   View,
   ImageBackground,
+  Dimensions,
   LogBox,
 } from "react-native";
 import { Provider } from "react-redux";
@@ -17,7 +19,14 @@ import { FirebaseConfig } from "./config/FirebaseConfig";
 import { colors } from "./src/common/theme";
 import { Settings } from "react-native-fbsdk-next";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { SafeAreaProvider } from "react-native-safe-area-context"; // Add this import
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: false,
+  }),
+});
 
 export default function App() {
   const [assetsLoaded, setAssetsLoaded] = useState(false);
@@ -76,14 +85,14 @@ export default function App() {
                     _loadResourcesAsync().then(() => setAssetsLoaded(true));
                   }
                 })
-                .catch(() => {
+                .catch((error) => {
                   _loadResourcesAsync().then(() => setAssetsLoaded(true));
                 });
             } else {
               _loadResourcesAsync().then(() => setAssetsLoaded(true));
             }
           })
-          .catch(() => {
+          .catch((error) => {
             _loadResourcesAsync().then(() => setAssetsLoaded(true));
           });
       } catch (error) {
@@ -111,17 +120,13 @@ export default function App() {
   }
 
   return (
-    <SafeAreaProvider>
-      {" "}
-      {/* Wrap your entire app with SafeAreaProvider */}
-      <Provider store={store}>
-        <FirebaseProvider config={FirebaseConfig} AsyncStorage={AsyncStorage}>
-          <AppCommon>
-            <AppContainer />
-          </AppCommon>
-        </FirebaseProvider>
-      </Provider>
-    </SafeAreaProvider>
+    <Provider store={store}>
+      <FirebaseProvider config={FirebaseConfig} AsyncStorage={AsyncStorage}>
+        <AppCommon>
+          <AppContainer />
+        </AppCommon>
+      </FirebaseProvider>
+    </Provider>
   );
 }
 

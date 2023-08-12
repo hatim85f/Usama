@@ -16,17 +16,15 @@ export const saveTracking = (bookingId, location) => {
 };
 
 export const fetchMostuffaApi = (place) => async (dispatch) => {
-  // const response = await fetch(
-  //   `https://apps.salekmasr.com/ar/api/findplacefromtext/16/${place}`
-  // );
-  // const resData = await response.json();
+  const response = await fetch(
+    `https://apps.salekmasr.com/ar/api/findplacefromtext/16/${place}`
+  );
+  const resData = await response.json();
 
-  // dispatch({
-  //   type: FETCH_MOSTUFFA_LOCATION,
-  //   payload: resData.data,
-  // });
-
-  console.log(place);
+  dispatch({
+    type: FETCH_MOSTUFFA_LOCATION,
+    payload: resData.data,
+  });
 };
 
 export const getPlaceCoords = (placeId) => async (dispatch, getState) => {

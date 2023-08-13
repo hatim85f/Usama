@@ -19,6 +19,7 @@ import { FirebaseConfig } from "./config/FirebaseConfig";
 import { colors } from "./src/common/theme";
 import { Settings } from "react-native-fbsdk-next";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import * as firebase from "firebase/app";
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -29,6 +30,9 @@ Notifications.setNotificationHandler({
 });
 
 export default function App() {
+  useEffect(() => {
+    firebase.initializeApp(FirebaseConfig);
+  }, []);
   const [assetsLoaded, setAssetsLoaded] = useState(false);
 
   useEffect(() => {
@@ -121,11 +125,9 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <FirebaseProvider config={FirebaseConfig} AsyncStorage={AsyncStorage}>
-        <AppCommon>
-          <AppContainer />
-        </AppCommon>
-      </FirebaseProvider>
+      <AppCommon>
+        <AppContainer />
+      </AppCommon>
     </Provider>
   );
 }

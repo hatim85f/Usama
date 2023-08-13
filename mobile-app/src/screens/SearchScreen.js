@@ -130,13 +130,13 @@ export default function SearchScreen(props) {
     }
   }, [settingsdata]);
 
-  // useEffect(() => {
-  //   if (addParam.length <= 5) {
-  //     setSavedAddresses(addParam);
-  //   } else {
-  //     setSavedAddresses(addParam.sort((a, b) => (a.count < b.count)).slice(0, 5));
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (addParam.length <= 5) {
+      setSavedAddresses(addParam);
+    } else {
+      setSavedAddresses(addParam.sort((a, b) => a.count < b.count).slice(0, 5));
+    }
+  }, []);
 
   useEffect(() => {
     if (tripdata.drop && locationType == "drop") {
@@ -159,15 +159,21 @@ export default function SearchScreen(props) {
     }
   }, [locationType, tripdata.drop]);
 
+  // first we fire new apis to get savedPlaces array which is resData.data
+  // if savedPlaces is returned then it will be set as searchResults and searchKeywords
+
   const searchLocation = useCallback(
     async (text) => {
       Alert.alert(
         "Good",
         `Your Response returning ${savedPlaces.length} resultls`[{ text: "Ok" }]
       );
-      setSearchKeyword(text);
+
       if (text.length > (settings.AllowCriticalEditsAdmin ? 3 : 5)) {
         dispatch(fetchingLocationActions.fetchMostuffaApi(text));
+
+        // this function is replacing the original one
+        //should fire the new apis
 
         if (savedPlaces.length > 0) {
           Alert.alert(
@@ -176,6 +182,7 @@ export default function SearchScreen(props) {
               { text: "Ok" }
             ]
           );
+          setSearchKeyword(savedPlaces.map((a) => a.description));
           setSearchResults(savedPlaces);
           setIsShowingResults(true);
         }

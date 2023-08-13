@@ -15,6 +15,10 @@ export const saveTracking = (bookingId, location) => {
   push(trackingRef(bookingId), location);
 };
 
+// function added to be used instead of google apis
+// the function is returning data array in postman
+// should take place text and pass it to the link GET
+// should log here and make sure text is being passed, the resData return is correct
 export const fetchMostuffaApi = (place) => async (dispatch) => {
   const response = await fetch(
     `https://apps.salekmasr.com/ar/api/findplacefromtext/16/${place}`
@@ -27,10 +31,14 @@ export const fetchMostuffaApi = (place) => async (dispatch) => {
   });
 };
 
+// should log and make sure neededCoords are properly distrubuted
+
 export const getPlaceCoords = (placeId) => async (dispatch, getState) => {
   const { savedPlaces } = getState().locationdata;
 
   const neededCoords = savedPlaces.find((a) => a.place_id === placeId).geometry;
+
+  // checking the savedPlaces and send the geometry which is lat and lang to coords object in reducer
 
   dispatch({
     type: FETCH_MANUAL_COORDS,
